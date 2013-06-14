@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "JiraFFE",
+  "description": "This extension makes Jira a little less anoying",
+  "version": "1.0",
+
+  "background": {
+    "scripts": ["js/jiraffe.js"]
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "img/jiraffe.jpg"
+    }
+  }
+}
