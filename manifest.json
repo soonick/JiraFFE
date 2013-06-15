@@ -12,7 +12,7 @@
   "permissions": [
     "storage",
     "webRequest",
-    "*://www.google.com/*"
+    "<all_urls>"
   ],
 
   "browser_action": {
