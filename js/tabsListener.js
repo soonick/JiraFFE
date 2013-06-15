@@ -1,9 +1,14 @@
-var callback = function() {
-  alert('Do something');
+var callback = function(details) {
+  chrome.tabs.executeScript(
+    details.tabId,
+    {
+      file: '/js/createIssue.js'
+    }
+  );
 };
 
 var filters = {
-  urls: ['*://www.google.com/*'],
+  urls: ['jiraurl'], // We will make this configurable
   types: ['main_frame']
 };
 
