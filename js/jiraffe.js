@@ -2,10 +2,10 @@ function toggleIcon() {
   var storage = chrome.storage.local;
   storage.get('isActive', function(val) {
     if (val.isActive) {
-      chrome.browserAction.setIcon({ path: 'img/jiraffe.jpg' });
+      chrome.browserAction.setIcon({ path: 'img/jiraffe-off.png' });
       storage.set({ 'isActive': false });
     } else {
-      chrome.browserAction.setIcon({ path: 'img/jiraffe2.jpg' });
+      chrome.browserAction.setIcon({ path: 'img/jiraffe-on.png' });
       storage.set({ 'isActive': true });
     }
   });
@@ -14,9 +14,9 @@ function toggleIcon() {
 function initializeIcon() {
   chrome.storage.local.get('isActive', function(val) {
     if (val.isActive) {
-      chrome.browserAction.setIcon({ path: 'img/jiraffe2.jpg' });
+      chrome.browserAction.setIcon({ path: 'img/jiraffe-on.png' });
     } else {
-      chrome.browserAction.setIcon({ path: 'img/jiraffe.jpg' });
+      chrome.browserAction.setIcon({ path: 'img/jiraffe-off.png' });
     }
   });
 }
