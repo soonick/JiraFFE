@@ -20,5 +20,6 @@
     "default_icon": {
       "19": "img/jiraffe-off.png"
     }
-  }
+  },
+  "options_page": "options.html"
 }
