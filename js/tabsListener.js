@@ -7,9 +7,13 @@ var callback = function(details) {
   );
 };
 
-var filters = {
-  urls: ['jiraurl'], // We will make this configurable
-  types: ['main_frame']
-};
+chrome.storage.local.get('urls', function(value) {
+  if (value.urls) {
+    var filters = {
+      urls: [value.urls],
+      types: ['main_frame']
+    };
 
-chrome.webRequest.onCompleted.addListener(callback, filters);
+    chrome.webRequest.onCompleted.addListener(callback, filters);
+  }
+});
