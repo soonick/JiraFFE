@@ -59,6 +59,10 @@ fields = [
   'customfield_10431'
 ];
 
+function assignToMe() {
+  document.getElementById('assign-to-me-trigger').click();
+}
+
 function tryHideElements() {
   var element;
   var depth;
@@ -85,6 +89,8 @@ function tryHideElements() {
 
     element.style.display = 'none';
   }
+
+  assignToMe();
 }
 
 var createButton = document.getElementById('create_link');
